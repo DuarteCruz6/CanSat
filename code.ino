@@ -11,7 +11,10 @@ Adafruit_INA219 ina219;
 void setup() {
 
   Serial.begin(9600);
-  unsigned status1 = bmp1.begin(0x77);             // SDO está desconectado              
+  Serial1.begin(9600);
+  delay(100);
+
+  unsigned status1 = bmp1.begin(0x77);             // SDO está desconectado; 3 piso              
   while (status1 == false){
     Serial.println("sensor 1 nao encontrado");
     delay(3000);
@@ -19,7 +22,7 @@ void setup() {
   }
 
 
-  unsigned status2 = bmp2.begin(0x76);             // SDO está ligado ao Ground
+  unsigned status2 = bmp2.begin(0x76);             // SDO está ligado ao Ground; 2 piso
   while (status2 == false){
     Serial.println("sensor 2 nao encontrado");
     delay(3000);
@@ -34,91 +37,84 @@ void setup() {
   }
 
   // Header Excel:
-  Serial.print("Tempo do Programa ");
-  Serial.print(";");
-  Serial.print(" Temperatura 1 ");
-  Serial.print(";");
-  Serial.print(" Pressao 1 ");
-  Serial.print(";");
-  Serial.print(" Altitude 1 ");
-  Serial.print(";");
-  Serial.print(" Temperatura 2 ");
-  Serial.print(";");
-  Serial.print(" Pressao 2 ");
-  Serial.print(";");
-  Serial.print(" Altitude 2 ");
-  Serial.print(";");
-  Serial.print(" Tensão do Circuito");
-  Serial.print(";");
-  Serial.print(" Corrente em milliAmperes");
-  Serial.print(";");
-  Serial.print(" Energia Criada");
-  Serial.print(";");
-  Serial.print(" Energia Utilizada");
-  Serial.println("");
+  Serial1.print("Tempo do Programa ");
+  Serial1.print(";");
+  Serial1.print(" Temperatura 1 ");
+  Serial1.print(";");
+  Serial1.print(" Pressao 1 ");
+  Serial1.print(";");
+  Serial1.print(" Altitude 1 ");
+  Serial1.print(";");
+  Serial1.print(" Temperatura 2 ");
+  Serial1.print(";");
+  Serial1.print(" Pressao 2 ");
+  Serial1.print(";");
+  Serial1.print(" Altitude 2 ");
+  Serial1.print(";");
+  Serial1.print(" Tensão do Circuito");
+  Serial1.print(";");
+  Serial1.print(" Corrente em milliAmperes");
+  Serial1.print(";");
+  Serial1.print(" Energia Criada");
+  Serial1.print(";");
+  Serial1.print(" Energia Utilizada");
+  Serial1.println("");
 
 }
 
-float pressaoMar = 1013.25; //Ajustar
-float bmp280usage = 0.0027;  //mA para 1Hz
-float ina219usage = 0.0019; //mA (pode estar errado) para 1Hz
-float arduinousage = 25;  //mA (ajustar)
+float pressaoMar = 1013.25; //AJUSTAR
+float bmp280usage = 0.0054;  //mA 
+float ina219usage = 0.0038; //mA 
+float arduinousage = 25;  //mA 
 float currentusage = bmp280usage * 2 + ina219usage + arduinousage; //energia utilizada
+float t1 = millis();
 
 void loop() {
+  Serial1.flush();
+  float t2 = millis();
+  float t = (t2 - t1)/1000;
+  Serial1.print(t);
+  Serial1.print(";");
 
-  time_t t = now();                                                                                                                                                                                                      
-  Serial.print(t);
-  Serial.print(" s");
-  Serial.print(";");
+  Serial1.print(bmp1.readTemperature());
+  Serial1.print(";");
 
-  Serial.print(bmp1.readTemperature());
-  Serial.print(" C");
-  Serial.print(";");
+  Serial1.print(bmp1.readPressure() / 100);
+  Serial1.print(";");
 
-  Serial.print(bmp1.readPressure() / 100);
-  Serial.print(" hPa");
-  Serial.print(";");
+  Serial1.print(bmp1.readAltitude(pressaoMar));
+  Serial1.print(";");
 
-  Serial.print(bmp1.readAltitude(pressaoMar));
-  Serial.print(" m");
-  Serial.print(";");
+  Serial1.print(bmp2.readTemperature());
+  Serial1.print(";");
 
-  Serial.print(bmp2.readTemperature());
-  Serial.print(" C");
-  Serial.print(";");
-
-  Serial.print(bmp2.readPressure() / 100);
-  Serial.print(" hPa");
-  Serial.print(";");
+  Serial1.print(bmp2.readPressure() / 100);
+  Serial1.print(";");
   
-  Serial.print(bmp2.readAltitude(pressaoMar));
-  Serial.print(" m");
-  Serial.print(";");
+  Serial1.print(bmp2.readAltitude(pressaoMar));
+  Serial1.print(";");
 
   float shuntvoltage = ina219.getShuntVoltage_mV(); // Voltagem entre as entradas V- e V+
   float busvoltage = ina219.getBusVoltage_V(); // Voltagem entre GND e V- 
   float loadvoltage = busvoltage + (shuntvoltage / 1000); // Tensão que passa no voltímetro
-  Serial.print(loadvoltage);
-  Serial.print(" V");
-  Serial.print(";");
+  t = now();
+  Serial1.print(loadvoltage);
+  Serial1.print(";");
 
   float current_mA = ina219.getCurrent_mA(); // Corrente em milliAmperes
-  Serial.print(current_mA); // Voltagem em milliAmperes
-  Serial.print(" mA");
-  Serial.print(";");
+  Serial1.print(current_mA); // Voltagem em milliAmperes
+  Serial1.print(";");
 
   float energycreated = current_mA/1000 * t;
-  Serial.print(energycreated);
-  Serial.print(" J");
-  Serial.print(";");
+  Serial1.print(energycreated);
+  Serial1.print(";");
 
   float energyused = currentusage/1000 * t;
-  Serial.print(energyused);
-  Serial.print(" J");
-  Serial.println("");
+  Serial1.print(energyused);
+  Serial1.print(";");
+  Serial1.println("");
 
-  delay(1000);
+  delay(500);
 }
 
 
