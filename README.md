@@ -14,3 +14,5 @@ and transmit these data as telemetry to the ground station at least once every s
 
 2. Secondary mission
 Our satellite will be eco-friendly, therefore, we chose to make it out of cork instead of plastic. Cork also has a lot of different properties which are perfect for our mission, such as being extremely resistant, weightless, thermic isolator, etc. We also decided to not waste the heat produced by the components, therefore, since cork is an extremely good isolator, we are using a thermoelectric generator in order to apply the Seebeck effect to produce energy out of heat. 
+
+FALTA ADICIONAR FOTOGRAFIA DO LOGO + ESCREVER MAIS COISAS (SOBRE O TRABALHO, INSTA, SITE, YOUTUBE)
