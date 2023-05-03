@@ -14,24 +14,24 @@ void setup() {
   Serial1.begin(9600);
   delay(100);
 
-  unsigned status1 = bmp1.begin(0x77);             // SDO está desconectado; isolado              
+  unsigned status1 = bmp1.begin(0x77);             // SDO is desconected; isolated              
   while (status1 == false){
-    Serial.println("sensor 1 nao encontrado");
+    Serial1.println("sensor 1 not found");
     delay(3000);
     status1 = bmp1.begin(0x77);
   }
 
 
-  unsigned status2 = bmp2.begin(0x76);             // SDO está ligado ao Ground; interior
+  unsigned status2 = bmp2.begin(0x76);             // SDO is connect to Ground; interior
   while (status2 == false){
-    Serial.println("sensor 2 nao encontrado");
+    Serial1.println("sensor 2 not found");
     delay(3000);
     status2 = bmp2.begin(0x76);
   }
 
   unsigned status3 = ina219.begin();
   while (status3 == false){
-    Serial.println("sensor ina219 nao encontrado");
+    Serial.println("sensor ina219 not found");
     delay(3000);
     status2 = ina219.begin(0x40);
   }
@@ -60,12 +60,12 @@ void setup() {
 
 }
 
-float pressaoMar = 1013.25; //AJUSTAR
+float pressaoMar = 1013.25; //ADJUST
 float bmp280usage = 0.0054;  //mA 
 float ina219usage = 0.0038; //mA 
 float arduinousage = 25;  //mA
 float antennausage = 30; //mA 
-float currentusagecomponents = bmp280usage * 2 + ina219usage; //energia utilizada com 8.76V de tensao
+float currentusagecomponents = bmp280usage * 2 + ina219usage; //energy used with 8.76V in our battery
 float t1 = millis();
 
 void loop() {
@@ -93,14 +93,14 @@ void loop() {
   Serial1.print(bmp2.readAltitude(pressaoMar));
   Serial1.print(";");
 
-  float shuntvoltage = ina219.getShuntVoltage_mV(); // Voltagem entre as entradas V- e V+
-  float busvoltage = ina219.getBusVoltage_V(); // Voltagem entre GND e V- 
-  float loadvoltage = busvoltage * 1000 + shuntvoltage; // Tensão que passa no voltímetro
+  float shuntvoltage = ina219.getShuntVoltage_mV(); // Voltage between V- e V+
+  float busvoltage = ina219.getBusVoltage_V(); // Voltage between GND e V- 
+  float loadvoltage = busvoltage * 1000 + shuntvoltage; // Voltage that passes on the multimeter
 
   t = now();
   
-  float current_mA = ina219.getCurrent_mA(); // Corrente em milliAmperes
-  Serial1.print(current_mA); // Voltagem em milliAmperes
+  float current_mA = ina219.getCurrent_mA(); // Current in mA
+  Serial1.print(current_mA);
   Serial1.print(";");
 
   float powercreated = loadvoltage * current_mA;
