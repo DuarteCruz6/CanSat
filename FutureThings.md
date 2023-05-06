@@ -1,2 +1,5 @@
-Change the name of the files
-Upgrade README
+- Upgrade README
+- Meter tudo em PDF
+- Ver as coisas que estão a tuga e escrever (Portuguese) no nome
+- Ver os guiões das apresentações
+- Verificar nome dos ficheiros
