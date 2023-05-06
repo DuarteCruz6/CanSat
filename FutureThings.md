@@ -3,3 +3,4 @@
 - Ver as coisas que estão a tuga e escrever (Portuguese) no nome
 - Ver os guiões das apresentações
 - Verificar nome dos ficheiros
+- Meter imagem da equipa no fim do README
