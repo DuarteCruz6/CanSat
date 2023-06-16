@@ -1,10 +1,10 @@
 # CanSat - Code for CanSat Portugal 2023
 
 ### Table of Contents
-- [What is CanSat?] (https://github.com/DuarteCruz6/CanSat_CanACork#WhatisCansat?)
-- [About our Satellite] (https://github.com/DuarteCruz6/CanSat_CanACork#AboutourSatellite)
-- [Advertisement] (https://github.com/DuarteCruz6/CanSat_CanACork#Advertisement)
-- [During the Competition] (https://github.com/DuarteCruz6/CanSat_CanACork#DuringtheCompetition)
+- [What is CanSat?](https://github.com/DuarteCruz6/CanSat_CanACork#WhatisCansat?)
+- [About our Satellite](https://github.com/DuarteCruz6/CanSat_CanACork#AboutourSatellite)
+- [Advertisement](https://github.com/DuarteCruz6/CanSat_CanACork#Advertisement)
+- [During the Competition](https://github.com/DuarteCruz6/CanSat_CanACork#DuringtheCompetition)
 
 ### What is CanSat?
 
@@ -26,8 +26,8 @@ In terms of data transmission, we planned for radio communication through two an
 
 ### Advertisement 
 
-The project was promoted mainly via social media, such as our [Instagram page] (https://www.instagram.com/canacork/) and [YouTube channel] (https://www.youtube.com/@canacork/) This made our ideas more accessible to young people in our school community and allowed us to track our progress.
-In addition, we created a [website] (https://canacork.wixsite.com/canacork) where all of the main information is neatly outlined.
+The project was promoted mainly via social media, such as our [Instagram page](https://www.instagram.com/canacork/) and [YouTube channel](https://www.youtube.com/@canacork/) This made our ideas more accessible to young people in our school community and allowed us to track our progress.
+In addition, we created a [website](https://canacork.wixsite.com/canacork) where all of the main information is neatly outlined.
 Our Instagram was especially active during the final, providing imaging on the rocket launch to well over 100 accounts. In summary, we reached over 600 accounts in 30 days having an impressive 586% of growth.
 Our project was also promoted by Pavilhão do Conhecimento and our team made an appearance in Portuguese national news program, SIC Notícias and CMTV. 
 
