@@ -1,6 +1,5 @@
 # CanSat
 ## Code for CanSat Portugal 2023
----
 
 ### What is CanSat?
 
