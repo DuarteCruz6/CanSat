@@ -1,10 +1,10 @@
 # CanSat - Code for CanSat Portugal 2023
 
 ### Table of Contents
-1. [What is CanSat?](https://github.com/DuarteCruz6/CanSat_CanACork#WhatisCansat?)
-2. [About our Satellite](https://github.com/DuarteCruz6/CanSat_CanACork#AboutourSatellite)
-3. [Advertisement](https://github.com/DuarteCruz6/CanSat_CanACork#Advertisement)
-4. [During the Competition](https://github.com/DuarteCruz6/CanSat_CanACork#DuringtheCompetition)
+1. [What is CanSat?](https://github.com/DuarteCruz6/CanSat_CanACork#what-is-cansat)
+2. [About our Satellite](https://github.com/DuarteCruz6/CanSat_CanACork#about-our-satellite)
+4. [Advertisement](https://github.com/DuarteCruz6/CanSat_CanACork#advertisement)
+5. [During the Competition](https://github.com/DuarteCruz6/CanSat_CanACork#during-the-competition)
 
 ### What is CanSat?
 
