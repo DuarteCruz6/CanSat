@@ -47,3 +47,5 @@ On the fourth day, once the stages of our project were concluded, we were able t
 Finally, on the fifth and last day, the awards were given to the winning team, as well as to others for their highlight in certain components. Although we did not receive any awards, we felt happy to be there and satisfied with our journey.
 
 It was, without a doubt, an enriching experience that allowed us all to develop technical skills and learn important lessons about resilience, leadership, and perseverance. Participating in this extracurricular project showed us how a challenge can be turned into a real opportunity of growth.
+
+![alt text](https://github.com/DuarteCruz6/CanSat_CanACork/blob/main/Photos%20and%20Videos/Team/Team.jpeg "CanACork")
