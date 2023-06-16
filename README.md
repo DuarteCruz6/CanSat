@@ -1,6 +1,7 @@
 # CanSat
 Code for CanSat Portugal 2023
-![image](https://github.com/DuarteCruz6/CanSat_CanACork/blob/main/Logo/CanACork.png)
+
+![alttext](https://github.com/DuarteCruz6/CanSat_CanACork/blob/main/Logo/CanACork.png)
 
 A CanSat is a competition ran by the European Space Agency (ESA). It consists of a simulation of a real satellite, integrated within the volume and shape of a soda can. The challenge for the students is to fit all the major subsystems found in a satellite, such as power, sensors and a communication system, into this minimal volume. The CanSat is then launched by a rocket up to an altitude of approximately 1 km, or dropped from a platform, drone, or captive balloon. Then its mission begins. This involves carrying out a scientific experiment and/or a technology demonstration, achieving a safe landing, and analyzing the mandatory the data collected (pressure and temperature).
 
