@@ -1,5 +1,11 @@
 # CanSat - Code for CanSat Portugal 2023
 
+### Table of Contents
+- [What is CanSat?] (https://github.com/DuarteCruz6/CanSat_CanACork#WhatisCansat?)
+- [About our Satellite] (https://github.com/DuarteCruz6/CanSat_CanACork#AboutourSatellite)
+- [Advertisement] (https://github.com/DuarteCruz6/CanSat_CanACork#Advertisement)
+- [During the Competition] (https://github.com/DuarteCruz6/CanSat_CanACork#DuringtheCompetition)
+
 ### What is CanSat?
 
 CanSat is a competition ran by the European Space Agency (ESA). It consists of a simulation of a real satellite, integrated within the volume and shape of a soda can. The challenge for the students is to fit all the major subsystems found in a satellite, such as power, sensors and a communication system, into this minimal volume. The CanSat is then launched by a rocket up to an altitude of approximately 1 km, or dropped from a platform, drone, or captive balloon. Then its mission begins. This involves carrying out a scientific experiment and/or a technology demonstration, achieving a safe landing, and analyzing the mandatory the data collected (pressure and temperature).
@@ -25,7 +31,7 @@ In addition, we created a [website] (https://canacork.wixsite.com/canacork) wher
 Our Instagram was especially active during the final, providing imaging on the rocket launch to well over 100 accounts. In summary, we reached over 600 accounts in 30 days having an impressive 586% of growth.
 Our project was also promoted by Pavilhão do Conhecimento and our team made an appearance in Portuguese national news program, SIC Notícias and CMTV. 
 
-### During the Competion 
+### During the Competition 
 
 This competition was an excellent learning opportunity. Our team had to work under constant pressure and deal with unexpected complications. With all of this, we saw our efforts being rewarded with the arrival of the long-awaited final in Ponte de Sor. Five days of dedication and focus on our project that gave us a unique experience.
 
