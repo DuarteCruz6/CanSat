@@ -1,4 +1,3 @@
-- Upgrade README
 - Meter tudo em PDF
 - Ver as coisas que estão a tuga e escrever (Portuguese) no nome
 - Ver os guiões das apresentações
